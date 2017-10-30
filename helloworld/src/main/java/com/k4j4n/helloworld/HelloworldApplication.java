@@ -19,7 +19,8 @@ public class HelloworldApplication {
 		//Message<String> message = MessageBuilder.withPayload("Kajan").build();
 		//
 		//channel.send(message);
-		HelloService helloService = ctx.getBean("helloService", HelloService.class);
+		//HelloService helloService = ctx.getBean("helloService", HelloService.class);
+		HelloService helloService = ctx.getBean("helloGateway", HelloService.class);
 		helloService.sayHello("Kajan");
 	}
 }
