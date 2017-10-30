@@ -1,5 +1,6 @@
 package com.k4j4n.helloworld.service;
 
+import org.springframework.integration.annotation.Gateway;
 import org.springframework.integration.annotation.ServiceActivator;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 public class HelloServiceImpl implements HelloService {
 	@Override
 	@ServiceActivator(inputChannel = "name")
+	//@Gateway(requestChannel = "name")
 	public void sayHello(String name) {
 		System.out.println("Hello " + name + " :)");
 	}
